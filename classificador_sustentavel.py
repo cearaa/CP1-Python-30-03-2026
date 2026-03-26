@@ -17,7 +17,7 @@ vezes = int(input("Quantas vezes essa mesma ação foi realizada neste mês? ( D
 validacao = input("Essa ação já foi validada pela plataforma, por foto, comprovante ou conferência? ( Sim/Não ): ")
 acao = input( "Essa ação foi coletiva ou gerou benefício para outras pessoas? ( Sim/Não ):  " )
 
-#Classificação de propriedades.
+#Classificação de pripriedades.
 if validacao == "Não":
     classificacao = "Sem pontuação."
 elif impacto == 3 and acao == "Sim":
@@ -28,6 +28,16 @@ else:
     classificacao = "Participação Registrada."
 
 #Mensagem de acordo com a prioridade.
-print("\n                                      ================================= Resultado =================================")
-if classificacao ==
-    acao =
+if classificacao == "Sem pontuação":
+    acao = "Solicitar validação da ação."
+elif classificacao == "Destaque Sústentavel":
+    acao = "Liberar Bônus Especial"
+elif classificacao == "Pontuação bônus":
+    acao = "Registrar Ação com Bônus"
+else:
+    acao = "Registrar Participação"
+
+#Saída de Dados.
+print("\n             ----Resultado----")
+print(f"Classificação: {classificacao}")
+print(f"Ação Recomendada: {acao}")
